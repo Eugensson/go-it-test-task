@@ -16,6 +16,7 @@ import {
 
 const Tweets = () => {
   const [visibleTweets, setVisibleTweets] = useState(3);
+  const [isLoadMoreDisabled, setLoadMoreDisabled] = useState(false);
 
   const dispatch = useDispatch();
   const filter = useSelector(selectFilter);
@@ -39,9 +40,15 @@ const Tweets = () => {
   }, [dispatch]);
 
   const handleLoadMore = () => {
-    setVisibleTweets(prevVisibleTweets =>
-      Math.min(prevVisibleTweets + (filteredTweets.length - 3))
+    const newVisibleTweets = Math.min(
+      visibleTweets + (filteredTweets.length - 3)
     );
+
+    setVisibleTweets(newVisibleTweets);
+
+    if (newVisibleTweets >= filteredTweets.length) {
+      setLoadMoreDisabled(true);
+    }
   };
 
   return (
@@ -53,7 +60,14 @@ const Tweets = () => {
       {filteredTweets.length > 0 && (
         <Cards visibleTweets={visibleTweets} filteredTweets={filteredTweets} />
       )}
-      <LoadMoreBtn type="button" onClick={handleLoadMore}>
+      <LoadMoreBtn
+        type="button"
+        onClick={handleLoadMore}
+        disabled={isLoadMoreDisabled}
+        style={
+          isLoadMoreDisabled ? { opacity: 0.5, cursor: 'not-allowed' } : null
+        }
+      >
         Load More
       </LoadMoreBtn>
     </TweetsContainer>
