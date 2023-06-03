@@ -39,7 +39,9 @@ const Tweets = () => {
   }, [dispatch]);
 
   const handleLoadMore = () => {
-    setVisibleTweets(prevVisibleTweets => prevVisibleTweets + 3);
+    setVisibleTweets(prevVisibleTweets =>
+      Math.min(prevVisibleTweets + (filteredTweets.length - 3))
+    );
   };
 
   return (

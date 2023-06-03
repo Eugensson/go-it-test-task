@@ -28,9 +28,9 @@ const Filter = () => {
           onChange={handleChange}
           label="Filter"
         >
-          <MenuItem value="All">All</MenuItem>
-          <MenuItem value="follow">Follow</MenuItem>
-          <MenuItem value="followings">Followings</MenuItem>
+          <MenuItem value="All">show all</MenuItem>
+          <MenuItem value="follow">follow</MenuItem>
+          <MenuItem value="followings">followings</MenuItem>
         </Select>
       </FormControl>
     </Find>
