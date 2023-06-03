@@ -1,7 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { AppContainer } from 'components/App/App.styled';
 
+import Loader from 'components/Loader/Loader';
+import { AppContainer } from 'components/App/App.styled';
 import Layout from 'components/Layout/Layout';
 import Home from '../../pages/Home';
 const Tweets = lazy(() => import('../../pages/Tweets'));
@@ -15,7 +16,7 @@ export default function App() {
           <Route
             path="/tweets"
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<Loader />}>
                 <Tweets />
               </Suspense>
             }
