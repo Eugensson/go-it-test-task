@@ -25,8 +25,7 @@ export const HomeTitle = styled.h1`
   text-align: center;
   color: orangered;
   font-weight: 700;
-
-  // background-color: orangered;
+  line-height: 1.63;
 `;
 
 export const HomeText = styled.p`
