@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { AppContainer } from 'components/App/App.styled';
 
 import Layout from 'components/Layout/Layout';
@@ -20,6 +20,7 @@ export default function App() {
               </Suspense>
             }
           />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </AppContainer>

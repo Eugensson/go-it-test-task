@@ -5,10 +5,10 @@ import {
   CardItemWrapper,
 } from 'components/Cards/Cards.styled';
 
-const Cards = ({ filteredTweets }) => {
+const Cards = ({ filteredTweets, visibleTweets }) => {
   return (
     <CardsListWrapper>
-      {filteredTweets.map(tweet => (
+      {filteredTweets.slice(0, visibleTweets).map(tweet => (
         <CardItemWrapper key={tweet.id}>
           <Card tweet={tweet} />
         </CardItemWrapper>

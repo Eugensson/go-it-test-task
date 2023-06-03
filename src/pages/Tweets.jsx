@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { fetchTweets } from 'redux/tweets/operations';
@@ -7,23 +7,30 @@ import { selectAllTweets, selectFollowers } from 'redux/tweets/selectors';
 import Filter from 'components/Filter/Filter';
 import Cards from 'components/Cards/Cards';
 
-import { BackLink, TweetsWrapper } from '../components/App/App.styled';
+import {
+  TweetsContainer,
+  BackLink,
+  TweetsWrapper,
+  LoadMoreBtn,
+} from '../components/App/App.styled';
 
 const Tweets = () => {
+  const [visibleTweets, setVisibleTweets] = useState(3);
+
   const dispatch = useDispatch();
   const filter = useSelector(selectFilter);
   const tweets = useSelector(selectAllTweets);
-  const folowers = useSelector(selectFollowers);
+  const followers = useSelector(selectFollowers);
 
   let filteredTweets = tweets;
 
   if (filter === 'follow') {
     filteredTweets = tweets.filter(
-      tweet => !folowers.includes(Number(tweet.id))
+      tweet => !followers.includes(Number(tweet.id))
     );
   } else if (filter === 'followings') {
     filteredTweets = tweets.filter(tweet =>
-      folowers.includes(Number(tweet.id))
+      followers.includes(Number(tweet.id))
     );
   }
 
@@ -31,14 +38,23 @@ const Tweets = () => {
     dispatch(fetchTweets());
   }, [dispatch]);
 
+  const handleLoadMore = () => {
+    setVisibleTweets(prevVisibleTweets => prevVisibleTweets + 3);
+  };
+
   return (
-    <>
+    <TweetsContainer>
       <TweetsWrapper>
         <BackLink to="/">Back</BackLink>
         <Filter />
       </TweetsWrapper>
-      {filteredTweets.length > 0 && <Cards filteredTweets={filteredTweets} />}
-    </>
+      {filteredTweets.length > 0 && (
+        <Cards visibleTweets={visibleTweets} filteredTweets={filteredTweets} />
+      )}
+      <LoadMoreBtn type="button" onClick={handleLoadMore}>
+        Load More
+      </LoadMoreBtn>
+    </TweetsContainer>
   );
 };
 

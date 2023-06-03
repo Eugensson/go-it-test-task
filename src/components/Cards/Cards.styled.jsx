@@ -1,14 +1,16 @@
 import styled from '@emotion/styled';
 
 export const CardsListWrapper = styled.ul`
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  list-style: none;
   gap: 20px;
+
+  width: 100%;
+
+  list-style: none;
 `;
 
 export const CardItemWrapper = styled.li`
@@ -16,8 +18,8 @@ export const CardItemWrapper = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 28px 36px;
+
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,

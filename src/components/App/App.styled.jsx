@@ -6,7 +6,40 @@ export const AppContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
+`;
+
+export const HomeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 50px auto 0;
+  padding: 40px;
+  width: 800px;
+
+  border-radius: 5px;
+  border: 3px solid orangered;
+`;
+
+export const HomeTitle = styled.h1`
+  text-align: center;
+  color: orangered;
+  font-weight: 700;
+
+  // background-color: orangered;
+`;
+
+export const HomeText = styled.p`
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  color: #471ca9;
+`;
+
+export const TweetsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 `;
 
 export const TweetsWrapper = styled.div`
@@ -19,22 +52,31 @@ export const TweetsWrapper = styled.div`
 export const BackLink = styled(Link)`
   display: flex;
   align-items: center;
-  font-size: 16px;
-  line-height: 26px;
-  background-color: #fff;
-  color: #471ca9;
   padding: 8px 16px;
-  font-weight: 500;
   height: 40px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-decoration: none;
   border-radius: 5px;
   border: 2px solid orangered;
-  text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
+  color: #fff;
+  background-color: orangered;
+`;
 
-  &:hover,
-  &:focus {
-    background-color: orangered;
-    color: #fff;
-  }
+export const LoadMoreBtn = styled.button`
+  margin: 0 auto;
+  padding: 8px 16px;
+  height: 40px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: #fff;
+  background-color: orangered;
 `;

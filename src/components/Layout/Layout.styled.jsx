@@ -21,13 +21,14 @@ export const Header = styled.header`
 
 export const Link = styled(NavLink)`
   padding: 8px 16px;
+
+  font-weight: 500;
   border-radius: 4px;
   text-decoration: none;
   color: #471ca9;
-  font-weight: 500;
 
   &.active {
-    color: white;
+    color: #fff;
     background-color: orangered;
   }
 `;

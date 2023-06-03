@@ -11,6 +11,7 @@ const filtersSlice = createSlice({
   name: 'filters',
   initialState: {
     value: '',
+    visibleTweets: 3,
   },
   reducers: {
     setStatusFilter(state, action) {
