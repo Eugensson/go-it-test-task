@@ -2,7 +2,7 @@ import { HomeWrapper, HomeTitle, HomeText } from 'components/App/App.styled';
 
 const Home = () => (
   <HomeWrapper>
-    <HomeTitle>Welcome to our platform, "TestApp"!</HomeTitle>
+    <HomeTitle>Welcome to our platform, "TweetCardsApp"!</HomeTitle>
     <HomeText>
       Introducing to you the innovative "TestApp" platform, which distinguishes
       itself as an unparalleled social network, completely revolutionizing the
