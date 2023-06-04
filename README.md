@@ -25,7 +25,6 @@ following fields has been created: id, user, tweets, followers, avatar.
 ```
 [
  {
-  "createdAt": "2023-06-01T14:45:45.934Z",
   "user": "Ethel Beer III",
   "tweets": 33,
   "followers": 10,
