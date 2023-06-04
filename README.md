@@ -1,8 +1,8 @@
-**"Tweet Cards App"**
+**"TWEET CARDS App"**
 
 ---
 
-**About**
+**ABOUT**
 
 The "Tweet Cards App" application has been developed in accordance with the
 technical requirements of GoIT company's training course, covering the following
@@ -49,7 +49,7 @@ state.
 
 ---
 
-**Installation and usage**
+**INSTALATION AND USAGE**
 
 - Clone the repository: `git clone < repository-url >`
 - Change directory: `cd < project-folder >`
@@ -58,7 +58,7 @@ state.
 
 ---
 
-**Structure**
+**STRUCTURE**
 
 - **src**: contains the source code of App
 - **components**: contains reusable components
@@ -68,14 +68,14 @@ state.
 
 ---
 
-**Contributing**
+**CONTRIBUTING**
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature
 requests, please open an issue or submit a pull request.
 
 ---
 
-**License**
+**LICENSE**
 
 This project is licensed under the
 [MIT-LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt).
