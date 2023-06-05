@@ -59,10 +59,17 @@ export const BackLink = styled(Link)`
   line-height: 1.63;
   text-decoration: none;
   border-radius: 5px;
-  border: 2px solid orangered;
+  border: 2px solid tranparent;
   cursor: pointer;
   color: #fff;
   background-color: orangered;
+
+  &:hover,
+  &:focus {
+    color: orangered;
+    background-color: #fff;
+    border: 2px solid orangered;
+  }
 `;
 
 export const LoadMoreBtn = styled.button`
@@ -78,4 +85,11 @@ export const LoadMoreBtn = styled.button`
   cursor: pointer;
   color: #fff;
   background-color: orangered;
+
+  &:hover,
+  &:focus {
+    color: orangered;
+    background-color: #fff;
+    border: 2px solid orangered;
+  }
 `;
