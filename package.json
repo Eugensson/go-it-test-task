@@ -1,8 +1,8 @@
 {
-  "name": "tweets-cards-app",
+  "name": "go-it-test-task",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://SerhiiKulbashnyi.github.io/tweets-cards-app/",
+  "homepage": "https://Eugensson.github.io/go-it-test-task/",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
