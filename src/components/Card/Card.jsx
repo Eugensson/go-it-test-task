@@ -16,9 +16,9 @@ import {
   CardBtnFollowing,
 } from 'components/Card/Card.styled';
 
-import logo from 'components/Card/logo.png';
-import cardPicture from './cardPicture.png';
-import avatarDefault from './avatarDefault.png';
+import logo from '../../assets/logo.png';
+import cardPicture from '../../assets/cardPicture.png';
+import avatarDefault from '../../assets/avatarDefault.png';
 
 const Card = ({ tweet }) => {
   const dispatch = useDispatch();

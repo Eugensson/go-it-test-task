@@ -12,7 +12,7 @@ import {
   BackLink,
   TweetsWrapper,
   LoadMoreBtn,
-} from '../components/App/App.styled';
+} from '../App.styled';
 
 const Tweets = () => {
   const [visibleTweets, setVisibleTweets] = useState(3);

@@ -1,4 +1,4 @@
-import { HomeWrapper, HomeTitle, HomeText } from 'components/App/App.styled';
+import { HomeWrapper, HomeTitle, HomeText } from 'App.styled';
 
 const Home = () => (
   <HomeWrapper>

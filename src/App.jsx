@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 import Loader from 'components/Loader/Loader';
-import { AppContainer } from 'components/App/App.styled';
+import { AppContainer } from 'App.styled';
 import Layout from 'components/Layout/Layout';
-import Home from '../../pages/Home';
-const Tweets = lazy(() => import('../../pages/Tweets'));
+import Home from './pages/Home';
+const Tweets = lazy(() => import('./pages/Tweets'));
 
 export default function App() {
   return (
